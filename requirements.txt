@@ -1,5 +1,5 @@
 beautifulsoup4
 matplotlib
 tensorflow
-spacy==3.5.0 
+spacy
 
