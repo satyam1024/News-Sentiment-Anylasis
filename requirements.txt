@@ -1,5 +1,6 @@
 beautifulsoup4
+streamlit
 matplotlib
 tensorflow
 spacy
-en-core-web-sm==3.0.0
+en-core-web-sm
