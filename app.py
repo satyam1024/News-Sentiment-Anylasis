@@ -7,9 +7,7 @@ import spacy
 import matplotlib.pyplot as plt
 from predict import predict_sentiments
 import re
-from spacy.cli import download
 
-download("en_core_web_sm")
 nlp = spacy.load('en_core_web_sm')
 
 # Function to refine the text from the URL
