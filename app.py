@@ -88,7 +88,7 @@ if len(sentence)>1:
     positive_sen = sentiment_count.get('Positive', 0)
     negative_sen = sentiment_count.get('Negative', 0)
     
-    st.write(f"Positive Sentence: {positive_sen}      Negative Sentence: {negative_sen}")
+    # st.write(f"Positive Sentence: {positive_sen}      Negative Sentence: {negative_sen}")
     if(positive_count>negative_count):
         st.write(f"Overall: Positive")
     elif(positive_count<negative_count):
