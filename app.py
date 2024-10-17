@@ -69,7 +69,7 @@ print(len(sentence))
 if len(sentence)>1:
     sentiment = []
     for s in sentence:
-        print(rspace(s))
+        
         out = predict_sentiments(rspace(s)) 
         predictions=np.argmax(out)
         if predictions == 0:
@@ -95,7 +95,7 @@ if len(sentence)>1:
         st.write(f"Overall: Negative")
     else:
         st.write(f"Overall: Neutral")
-    st.write(f"Positive Sentence: {positive_count}      Negative Sentence: {negative_count}")
+    
     labels = ['Positive', 'Negative']
     sizes = [positive_count, negative_count]
     colors = ['#66b3ff', '#ff6666']
