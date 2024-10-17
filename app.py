@@ -9,7 +9,10 @@ from predict import predict_sentiments
 import re
 
 
-# Function to refine the text from the URL
+def adds(text):
+    return re.sub(r'(?<!^)(?<![A-Z])(?=[A-Z])', ' ', text)
+    
+
 def chunk_long_sentence(sentence):
     chunks = re.split(r'(?<=[.!?]) +', sentence)  # Split at punctuation
     return chunks
@@ -30,15 +33,17 @@ def refine(link):
     clean_text = ''.join([c for c in clean_text if c != "'"])
     
     sentence = []
+    clean_text=adds(clean_text)
     tokens = chunk_long_sentence(clean_text)
-    for sent in tokens.sents:
+    for sent in tokens:
         if len(sentence) > 100:
             chunks = chunk_long_sentence(sentence)
             for c in chunks:
                 if len(c) > 100:
-                    k=c.text.strip()
+                    k=c.strip()
+                    
                     sentence.append(k[:-100])
-        sentence.append((sent.text.strip()))
+        sentence.append((sent.strip()))
     
     return sentence
 
@@ -108,5 +113,6 @@ if len(sentence)>1:
 
     # Display the chart in Streamlit
     st.pyplot(fig)
+
 
 
