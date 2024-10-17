@@ -3,12 +3,11 @@ from bs4 import BeautifulSoup
 import numpy as np 
 import pandas as pd 
 import streamlit as st  
-# import spacy
+
 import matplotlib.pyplot as plt
 from predict import predict_sentiments
 import re
 
-# nlp = spacy.load('en_core_web_sm')
 
 # Function to refine the text from the URL
 def chunk_long_sentence(sentence):
