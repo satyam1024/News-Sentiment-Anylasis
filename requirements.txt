@@ -2,4 +2,4 @@ beautifulsoup4
 matplotlib
 tensorflow
 spacy
-en_core_web_sm
+en-core-web-sm==3.0.0
